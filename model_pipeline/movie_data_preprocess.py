@@ -119,7 +119,7 @@ def url_to_df(url, sel_chars):
     : return: dialogue_df dataframe made up of 3 columns consisting
     conversation 1) init, 2) response and 3) dialogue_grp
     """
-    with open('movie-script.txt', 'r') as f:
+    with open('model_pipeline/movie-script.txt', 'r') as f:
         text = f.read()
 
     # break into lines and remove leading and trailing space on each
