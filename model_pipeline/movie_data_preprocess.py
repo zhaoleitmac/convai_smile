@@ -257,16 +257,16 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--pdf_file', type=str, default='./data/before-sunrise.pdf',
                         help='Path to movie script pdf file')
-    parser.add_argument('--sel_chars_1', nargs='+', default='CELINE JESSE',
-                    help='selected dialogue characters from pdf')
-    # parser.add_argument('--sel_chars_1', type=list, default=['CELINE','JESSE'],
-    #                 help='selected dialogue characters from pdf')
+    #parser.add_argument('--sel_chars_1', nargs='+', default='CELINE JESSE',
+    #                help='selected dialogue characters from pdf')
+    parser.add_argument('--sel_chars_1', type=list, default=['CELINE','JESSE'],
+                        help='selected dialogue characters from pdf')
     parser.add_argument('--url', type=str, default="https://sunrisesunset.fandom.com/wiki/Before_Sunset_(2004)_script",
                         help='url link to movie script')
-    parser.add_argument('--sel_chars_2', nargs='+', default='Céline Jesse',
-                        help='selected dialogue characters from pdf')
-    # parser.add_argument('--sel_chars_2', type=list, default=['Céline','Jesse'],
-    #                     help='selected dialogue characters from url')
+    #parser.add_argument('--sel_chars_2', nargs='+', default='Céline Jesse',
+    #                    help='selected dialogue characters from pdf')
+    parser.add_argument('--sel_chars_2', type=list, default=['Céline','Jesse'],
+                        help='selected dialogue characters from url')
     parser.add_argument('--personality', type=list, default=['i am celine.', 'i am french.', 'i enjoy sunrise and sunset.', 'i live in paris.'],
                         help='personality of dialogue response character')
     parser.add_argument('--max_tokens', type=int, default=100,
