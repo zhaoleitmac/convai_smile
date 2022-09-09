@@ -119,15 +119,8 @@ def url_to_df(url, sel_chars):
     : return: dialogue_df dataframe made up of 3 columns consisting
     conversation 1) init, 2) response and 3) dialogue_grp
     """
-    html = urlopen(url).read()
-    soup = BeautifulSoup(html, features="html.parser")
-
-    # kill all script and style elements
-    for script in soup(["script", "style"]):
-        script.extract()    # rip it out
-
-    # get text
-    text = soup.get_text()
+    with open('movie-script.txt', 'r') as f:
+        text = f.read()
 
     # break into lines and remove leading and trailing space on each
     lines = (line.strip() for line in text.splitlines())
