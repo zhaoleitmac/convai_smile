@@ -168,7 +168,7 @@ if __name__ == "__main__":
         train_args.num_candidates = grid_param['num_candidates']
 
         model = ConvAIModel("gpt", tempdir,
-                            use_cuda=0, args=train_args)
+                            use_cuda=1, args=train_args)
 
         #  Create directory to save best model for each grid combination
         grid_best_model = './tmp/' + str(c)
