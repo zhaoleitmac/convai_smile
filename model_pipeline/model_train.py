@@ -239,7 +239,6 @@ if __name__ == "__main__":
     best_model = ConvAIModel("gpt", './tmp/'+str(best_combination_no),
                           use_cuda=args.use_cuda,
                           args=train_args)
-    output_best_dir = '../data/'
     best_model.tokenizer.save_pretrained(output_best_dir)
     best_model.model.save_pretrained(output_best_dir)
     best_model.args.save(output_best_dir)
